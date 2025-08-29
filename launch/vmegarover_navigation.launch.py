@@ -12,19 +12,19 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     map_dir = os.path.join(get_package_share_directory(
-        'megarover_samples_ros2'), 'maps')
+        'megarover_dev'), 'maps')
     map_file = LaunchConfiguration('map', default=os.path.join(
         map_dir, 'vmegarover_samplemap.yaml'))
 
     param_dir = os.path.join(get_package_share_directory(
-        'megarover_samples_ros2'), 'config')
+        'megarover_dev'), 'config')
     param_file = LaunchConfiguration(
         'params', default=os.path.join(param_dir, 'navigation_param.yaml'))
 
     nav2_launch_file_dir = os.path.join(
         get_package_share_directory('nav2_bringup'), 'launch')
     rviz_config_dir = os.path.join(
-        get_package_share_directory('megarover_samples_ros2'), 'rviz')
+        get_package_share_directory('megarover_dev'), 'rviz')
     rviz_config_file = os.path.join(rviz_config_dir, 'navigation.rviz')
 
     return LaunchDescription([

@@ -29,7 +29,7 @@ def generate_launch_description():
     gui = LaunchConfiguration('gui')
     gazebo_simulator = LaunchConfiguration('gazebo')
 
-    launch_file_dir = PathJoinSubstitution([FindPackageShare('megarover_samples_ros2'), 'launch'])
+    launch_file_dir = PathJoinSubstitution([FindPackageShare('megarover_dev'), 'launch'])
 
     # setup classic gazebo
     classic_gazebo_launch = IncludeLaunchDescription(

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find megarover_samples_ros2)/urdf/common.xacro"/>
-  <xacro:include filename="$(find megarover_samples_ros2)/urdf/lrf/lrf.gazebo.xacro"/>
+  <xacro:include filename="$(find megarover_dev)/urdf/common.xacro"/>
+  <xacro:include filename="$(find megarover_dev)/urdf/lrf/lrf.gazebo.xacro"/>
 
   <xacro:macro name="lrf_v0" params="prefix parent *joint_origin">
     <joint name="${prefix}_lrf_joint" type="fixed">
@@ -14,12 +14,12 @@
     <link name="${prefix}_lrf_link">
       <visual>
         <geometry>
-          <mesh filename="file://$(find megarover_samples_ros2)/models/vmegarover/meshes/dae/lrf.dae"/>
+          <mesh filename="file://$(find megarover_dev)/models/vmegarover/meshes/dae/lrf.dae"/>
         </geometry>
       </visual>
       <collision>
         <geometry>
-          <mesh filename="file://$(find megarover_samples_ros2)/models/vmegarover/meshes/stl/lrf.stl"/>
+          <mesh filename="file://$(find megarover_dev)/models/vmegarover/meshes/stl/lrf.stl"/>
         </geometry>
       </collision>
       <inertial>

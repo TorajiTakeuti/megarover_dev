@@ -3,16 +3,35 @@
 <package format="3">
   <name>megarover_dev</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>megarover_dev package</description>
   <maintainer email="aichitead24305@gmail.com">map4</maintainer>
-  <license>TODO: License declaration</license>
+  <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>gazebo_ros_pkg</depend>
+  <depend>sensor_msgs</depend>
+
+  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>ign_ros2_control</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ros_ign</exec_depend>
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>xacro</exec_depend>  
+  <exec_depend>diff_driver_controller</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_plugin path="${prefix}/lib"/>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
   </export>
 </package>

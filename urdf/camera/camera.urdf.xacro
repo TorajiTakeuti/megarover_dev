@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find megarover_samples_ros2)/urdf/common.xacro"/>
-  <xacro:include filename="$(find megarover_samples_ros2)/urdf/camera/camera.gazebo.xacro"/>
+  <xacro:include filename="$(find megarover_dev)/urdf/common.xacro"/>
+  <xacro:include filename="$(find megarover_dev)/urdf/camera/camera.gazebo.xacro"/>
   <xacro:macro name="camera_v0" params="prefix parent *joint_origin">
     <joint name="${prefix}_camera_joint" type="fixed">
       <xacro:insert_block name="joint_origin"/>
